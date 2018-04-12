@@ -1,9 +1,16 @@
-.root-app {
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+nav a {
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px 25px;
+    margin: 4px;
+    border: 1px solid coral;
 }
-.app-login {
-  width: 500px;
+
+nav a:hover {
+    background-color: rgba(255, 127, 80, 0.294);
+}
+
+nav a.selected {
+    background-color: coral;
+    color: white;
 }

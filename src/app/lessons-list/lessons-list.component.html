@@ -1,0 +1,12 @@
+<p>
+  <button (click)="onCreate()">create</button>
+</p>
+<table>
+  <tr *ngFor="let lesson of lessons">
+    <td [class.done]="lesson.completed">{{lesson.name}}</td>
+    <td>
+      <button (click)="onEdit(lesson)">edit</button>
+      <button (click)="onDelete(lesson)">delete</button>
+    </td>
+  </tr>
+</table>
