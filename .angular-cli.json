@@ -20,7 +20,7 @@
       "prefix": "app",
       "styles": [
         "styles.css",
-        "../node_moodules/bootstrap/dist/bootstrap.min.css"
+        "bootstrap.min.css"
       ],
       "scripts": [],
       "environmentSource": "environments/environment.ts",

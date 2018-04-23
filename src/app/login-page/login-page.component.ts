@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from "@angular/router";
+import { Router } from '@angular/router';
+import { NgForm } from '@angular/forms';
+
 
 
 @Component({
@@ -8,13 +10,23 @@ import { Router } from "@angular/router";
   styleUrls: ['./login-page.component.css']
 })
 export class LoginPageComponent implements OnInit {
+   user: Object;
+  constructor(private router: Router) {
 
-  constructor(private router: Router) { }
+  }
+  error = false;
 
   ngOnInit() {
+    this.user = {
+      login: '',
+      pass: ''
+    };
   }
-  onSubmit = () => {
-    this.router.navigate(["lessons"])
+  onSubmit = (e: NgForm) => {
+    if (this.user.login === 'root' && this.user.pass === 'root') {
+      this.router.navigate(['lessons']);
+    } else {
+      this.error = true;
+    }
   }
-
 }

@@ -14,8 +14,8 @@ export class LessonsService {
     getById = (id: number) => this.data.find(i => i.id === id );
 
     create = (lesson: Lesson) => {
+        debugger
         this.data.push(lesson);
-        return this.data;
     }
 
     update = (lesson: Lesson) => {

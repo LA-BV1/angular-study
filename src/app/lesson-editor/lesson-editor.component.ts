@@ -5,8 +5,8 @@ import { Lesson } from "../shared/lesson.model";
 
 @Component({
   selector: "app-lesson-editor",
-  templateUrl: "./lesson-editor.component.html",
-  styleUrls: ["./lesson-editor.component.css"]
+  templateUrl: './lesson-editor.component.html',
+  styleUrls: ['./lesson-editor.component.css']
 })
 export class LessonEditorComponent implements OnInit {
   lesson: Lesson;
@@ -16,8 +16,8 @@ export class LessonEditorComponent implements OnInit {
   ngOnInit() {
     const id: number = +this.currentRoute.snapshot.paramMap.get('id');
     if (id) {
-      this.service.getById(id);
-    else {
+      this.lesson = this.service.getById(id);
+    } else {
       this.lesson = new Lesson();
     }
   }
@@ -35,6 +35,6 @@ export class LessonEditorComponent implements OnInit {
   }
 
   goToList() {
-    this.router.navigate([".."]);
+    this.router.navigate(['lessons']);
   }
 }

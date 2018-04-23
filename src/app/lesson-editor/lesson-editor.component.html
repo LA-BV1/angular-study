@@ -1,18 +1,21 @@
-<div *ngIf="lesson">
-  <div>
-    <p>
-      <label for="name">Name</label>
-      <input id="name" type="text" [(ngModel)]="lesson.name">
-    </p>
-  </div>
-  <div>
-    <p>
-      <label for="completed">Completed</label>
-      <input id="completed" type="checkbox" [(ngModel)]="lesson.completed">
-    </p>
-  </div>
-  <div>
-    <button (click)="onCancel()">Cancel</button>
-    <button (click)="onSave()">Save</button>
+<div class="row justify-content-md-center" *ngIf="lesson">
+  <div class="col-lg-6">
+    <button class="btn btn-secondary" (click)="goToList()">Go Back</button>
+    <form action="">
+      <div class="form-group">
+        <label for="name" class="col-sm-2 control-label">Name</label>
+        <div class="col-sm-12">
+          <input class="form-control" name="name" id="name" type="text" [(ngModel)]="lesson.name">
+        </div>
+      </div>
+      <div class="form-check">
+        <input [(ngModel)]="lesson.completed" name="checkbox" type="checkbox" class="form-check-input" id="exampleCheck1">
+        <label class="form-check-label" for="exampleCheck1">Completed</label>
+      </div>
+    </form>
+    <div>
+      <button class="btn btn-danger" (click)="onCancel()">Cancel</button>
+      <button class="btn btn-success" (click)="onSave()">Save</button>
+    </div>
   </div>
 </div>

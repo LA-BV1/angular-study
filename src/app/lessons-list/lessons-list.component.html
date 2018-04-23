@@ -1,12 +1,16 @@
-<p>
-  <button (click)="onCreate()">create</button>
-</p>
-<table>
-  <tr *ngFor="let lesson of lessons">
-    <td [class.done]="lesson.completed">{{lesson.name}}</td>
-    <td>
-      <button (click)="onEdit(lesson)">edit</button>
-      <button (click)="onDelete(lesson)">delete</button>
-    </td>
-  </tr>
-</table>
+<div class="row justify-content-md-center">
+  <div class="col-lg-6">
+    <h1>Lesson List:</h1>
+    <p>
+      <button class="btn btn-success" (click)="onCreate()">create</button>
+    </p>
+    <ul *ngFor="let lesson of lessons" class="list-group">
+      <li [class.active]="lesson.completed" class="list-group-item">
+        {{lesson.name}}
+        <input type="checkbox" [checked]="lesson.completed">
+        <button class="btn btn-success" (click)="onEdit(lesson)">edit</button>
+        <button class="btn btn-danger" (click)="onDelete(lesson)">delete</button>
+      </li>
+    </ul>
+  </div>
+</div>
