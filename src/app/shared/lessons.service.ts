@@ -13,10 +13,7 @@ export class LessonsService {
 
     getById = (id: number) => this.data.find(i => i.id === id );
 
-    create = (lesson: Lesson) => {
-        debugger
-        this.data.push(lesson);
-    }
+    create = (lesson: Lesson) => this.data.push({...lesson, id: this.data.length + 1 });
 
     update = (lesson: Lesson) => {
         return this.data.map(i => {

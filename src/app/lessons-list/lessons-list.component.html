@@ -7,7 +7,7 @@
     <ul *ngFor="let lesson of lessons" class="list-group">
       <li [class.active]="lesson.completed" class="list-group-item">
         {{lesson.name}}
-        <input type="checkbox" [checked]="lesson.completed">
+        <input disabled type="checkbox" [checked]="lesson.completed">
         <button class="btn btn-success" (click)="onEdit(lesson)">edit</button>
         <button class="btn btn-danger" (click)="onDelete(lesson)">delete</button>
       </li>
