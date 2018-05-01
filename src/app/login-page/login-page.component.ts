@@ -10,17 +10,16 @@ import { NgForm } from '@angular/forms';
   styleUrls: ['./login-page.component.css']
 })
 export class LoginPageComponent implements OnInit {
-   user: Object;
   constructor(private router: Router) {
 
   }
+  user = {
+    login: '',
+    pass: ''
+  };
   error = false;
 
   ngOnInit() {
-    this.user = {
-      login: '',
-      pass: ''
-    };
   }
   onSubmit = (e: NgForm) => {
     if (this.user.login === 'root' && this.user.pass === 'root') {

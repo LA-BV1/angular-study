@@ -32,6 +32,7 @@ export class LessonEditorComponent implements OnInit {
     } else {
       this.service.create(this.lesson);
     }
+    this.goToList();
   }
 
   goToList() {
