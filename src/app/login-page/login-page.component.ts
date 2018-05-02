@@ -23,7 +23,7 @@ export class LoginPageComponent implements OnInit {
   }
   onSubmit = (e: NgForm) => {
     if (this.user.login === 'root' && this.user.pass === 'root') {
-      this.router.navigate(['lessons']);
+      this.router.navigate(['invoices']);
     } else {
       this.error = true;
     }

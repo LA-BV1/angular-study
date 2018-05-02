@@ -5,6 +5,7 @@
     position: relative;
     margin-top: 10px;
 }
-/* .btn-primary {
-    margin-left: 100px;
-} */
+.container {
+    height: 70vh;
+    overflow: auto;
+}

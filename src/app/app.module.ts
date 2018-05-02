@@ -1,22 +1,22 @@
-import { BrowserModule } from "@angular/platform-browser";
-import { NgModule } from "@angular/core";
-import { FormsModule } from "@angular/forms";
-import { HttpModule } from "@angular/http";
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { HttpModule } from '@angular/http';
 
-import { AppRoutingModule } from "./app-routing.module";
-import { AppComponent } from "./app.component";
-import { LessonsListComponent } from "./lessons-list/lessons-list.component";
-import { SettingsComponent } from "./settings/settings.component";
-import { LessonsService } from "./shared/lessons.service";
-import { LessonEditorComponent } from "./lesson-editor/lesson-editor.component";
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
+import { InvoicesListComponent } from './invoices-list/invoices-list.component';
+import { SettingsComponent } from './settings/settings.component';
+import { InvoiceService } from './shared/invoice.service';
+import { InvoiceEditorComponent } from './invoice-editor/invoice-editor.component';
 import { LoginPageComponent } from './login-page/login-page.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    LessonsListComponent,
+    InvoicesListComponent,
     SettingsComponent,
-    LessonEditorComponent,
+    InvoiceEditorComponent,
     LoginPageComponent
   ],
   imports: [
@@ -25,7 +25,7 @@ import { LoginPageComponent } from './login-page/login-page.component';
     FormsModule,
     HttpModule
   ],
-  providers: [LessonsService],
+  providers: [InvoiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
