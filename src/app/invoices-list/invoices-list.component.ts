@@ -41,6 +41,10 @@ export class InvoicesListComponent implements OnInit {
   onCreate() {
     this.router.navigate(['invoices', 'create']);
   }
+  onDublicate(invoice: Invoice) {
+    this.service.dublicate(invoice.id);
+    this.refresh();
+  }
 
   onEdit(invoice: Invoice) {
     this.router.navigate(['invoices', 'edit', invoice.id]);
